@@ -61,7 +61,7 @@ class ViewController: UIViewController {
     }
     
     func startOver(){
-        round = 1
+        round = 0
         score = 0
         displayData()
     }
