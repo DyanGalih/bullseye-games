@@ -40,9 +40,21 @@ class ViewController: UIViewController {
         
         score += point
         
+        let title: String
+        
+        if difference == 0 {
+            title = "Perfect!"
+        }else if difference < 5{
+            title = "You almost had it!"
+        }else if difference < 10 {
+            title = "Pretty good!"
+        }else{
+            title = "Not event close..."
+        }
+        
         let message = "Your scored \(point) points"
         
-        let alert = UIAlertController(title: "Score", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
         
